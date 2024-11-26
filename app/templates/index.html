@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    <h2>Clientes Registrados</h2>
+    <ul>
+        {% for cliente in clientes %}
+        <li>{{ cliente.nombre }} - {{ cliente.correo }} - {{ cliente.telefono }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('main.add_cliente') }}">Agregar Cliente</a>
+
+</body>
+</html>
